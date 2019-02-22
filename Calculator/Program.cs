@@ -7,9 +7,22 @@ namespace Calculator
         public static void Main()
         {
             int result = 0;
+            Console.Write("Enter your first number: ");
+            int firstNum = int.Parse( Console.ReadLine());
+            Console.Write("Enter your second number: ");
+            int secNum = int.Parse(Console.ReadLine());
+            Console.Write("Would you like to add, subtract, multiply, or divide? ");
+            string operate = Console.ReadLine();
 
-            // Create a simple calculator that asks the user to input two different numbers 
-            // and whether they want to add, subtract, multiply or divide them. 
+            if (operate == "add"){
+                 result = firstNum + secNum; }
+
+            if (operate == "subtract"){
+                result = firstNum - secNum;}
+            if (operate == "multiply"){
+                result = firstNum * secNum;}
+            if (operate == "divide"){
+                result = firstNum / secNum;}
 
             Console.WriteLine($"Total = {result}");
 
